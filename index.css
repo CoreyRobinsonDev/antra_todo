@@ -10,7 +10,7 @@ html {
 }
 body {
 	font-size: 1.6rem;
-  font-family: 'Taviraj', serif;
+  font-family: sans-serif;
 }
 :root {
   --tan: #e6e2d3;
@@ -19,3 +19,5 @@ body {
   --vermillion-red: #c94c4c;
   --blue: #008cba;
 }
+
+
