@@ -1,0 +1,21 @@
+html {  
+	box-sizing: border-box;   
+	font-size: 62.5%;
+}
+*, *::before, *::after {  
+	box-sizing: inherit;
+	text-decoration: none;
+	margin: 0;  
+	padding: 0;
+}
+body {
+	font-size: 1.6rem;
+  font-family: 'Taviraj', serif;
+}
+:root {
+  --tan: #e6e2d3;
+  --traffic-white: #f0f0f0;
+  --yellow-green: #4caf50;
+  --vermillion-red: #c94c4c;
+  --blue: #008cba;
+}
