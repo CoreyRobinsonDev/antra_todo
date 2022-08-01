@@ -20,4 +20,7 @@ body {
   --blue: #008cba;
 }
 
-
+.edit__btn, .delete__btn {
+  width: 2rem;
+  height: auto;
+}
