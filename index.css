@@ -11,6 +11,10 @@ html {
 body {
 	font-size: 1.6rem;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
 }
 :root {
   --tan: #e6e2d3;
@@ -20,8 +24,65 @@ body {
   --blue: #008cba;
 }
 
+
+.input {
+  border: 1px solid var(--traffic-white);
+  height: 3rem;
+  margin: 0 1rem;
+  font-size: 2rem;
+}
+
+.submit__btn {
+  height: 3rem;
+  font-size: 2rem;
+  color: white;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 5px;
+  padding: 0 .5rem;
+}
+
+
+.todo__container {
+  border-radius: 5px;
+  border: 1px solid var(--tan);
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+
+.todo__item--section {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--tan);
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.todo__item {
+  text-align: center;
+  font-size: 2rem;
+  width: 66%;
+  cursor: pointer;
+}
+
+.--completed {
+  text-decoration: line-through;
+  color: grey;
+}
+
 .edit__btn, .delete__btn {
-  width: 2rem;
+  width: 3rem;
   height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit__btn {
+  background-color: var(--blue);
+}
+.delete__btn {
+  background-color: var(--vermillion-red);
 }
 
