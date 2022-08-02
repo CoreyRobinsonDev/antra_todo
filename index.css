@@ -40,12 +40,13 @@ body {
   border: none;
   border-radius: 5px;
   padding: 0 .5rem;
+  cursor: pointer;
 }
 
 
 .todo__container {
   border-radius: 5px;
-  border: 1px solid var(--tan);
+  border: 2px solid var(--tan);
   margin: 2rem 0;
   padding: 1rem;
 }
@@ -76,7 +77,12 @@ body {
   width: 3rem;
   height: auto;
   border-radius: 5px;
-  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+path {
+  fill: white;
 }
 
 .edit__btn {
