@@ -25,7 +25,7 @@ const state = new State();
 const todoContainer = document.querySelector(".todo__container");
 const formElement = document.querySelector(".form__container");
 const baseURL = "http://localhost:3000"
-const defaultMsg = "<p>no active task</p>"
+const defaultMsg = "<p class='todo__default-msg'>no active task</p>"
 
 fetch(`${baseURL}/todos`)
   .then((res) => res.json())
@@ -46,9 +46,9 @@ function generateTodoTemplate({ id, title, completed }) {
 }
 
 function renderTodos() {
-  if (state.todos.length === 0) todoContainer.innerHTML = defaultMsg;
   const todoTemplates  = state.todos.map((todo) => generateTodoTemplate(todo))
   todoContainer.innerHTML = todoTemplates.join("");
+  if (state.todos.length === 0) todoContainer.innerHTML = defaultMsg;
 }
 
 function onSubmit(event) {
