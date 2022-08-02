@@ -14,7 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem auto;
+  width: 80vw;
 }
 :root {
   --tan: #e6e2d3;
@@ -46,6 +47,7 @@ body {
 
 
 .todo__container {
+  width: 100%;
   border-radius: 5px;
   border: 2px solid var(--tan);
   margin: 2rem 0;
@@ -56,6 +58,7 @@ body {
 .todo__item--section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--tan);
   margin: 1rem 0;
   padding: 1rem;
@@ -65,7 +68,7 @@ body {
 .todo__item {
   text-align: center;
   font-size: 2rem;
-  width: 66%;
+  width: 75%;
   cursor: pointer;
 }
 
@@ -84,10 +87,21 @@ body {
   border-radius: 5px;
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 path {
   fill: white;
+}
+
+.input--edit {
+  border: 1px solid var(--traffic-white);
+  border-radius: 5px;
+  height: 3rem;
+  margin: 0 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+
 }
 
 .edit__btn {
@@ -97,3 +111,9 @@ path {
   background-color: var(--vermillion-red);
 }
 
+@media only screen and (max-width: 800px) {
+  .submit__btn {
+    margin: 1rem 0;
+    width: 100%;
+  }
+}
