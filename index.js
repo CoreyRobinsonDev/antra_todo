@@ -22,7 +22,8 @@ class State {
 
 // CONST
 const state = new State();
-const todoContainer = document.querySelector(".todo__container");
+const uncompletedTodoContainer = document.querySelector(".uncompleted__todos");
+const completedTodoContainer = document.querySelector(".completed__todos");
 const formElement = document.querySelector(".form__container");
 const baseURL = "http://localhost:3000"
 const defaultMsg = "<p class='todo__default-msg'>no active task</p>"
@@ -46,8 +47,17 @@ function generateTodoTemplate({ id, title, completed }) {
 }
 
 function renderTodos() {
-  const todoTemplates  = state.todos.map((todo) => generateTodoTemplate(todo))
-  todoContainer.innerHTML = todoTemplates.join("");
+  const completedTodos = [];
+  const uncompletedTodos = [];
+  for (const todo of state.todos) {
+    if (todo.completed === true) {
+      completedTodos.push(generateTodoTemplate(todo));
+    } else {
+      uncompletedTodos.push(generateTodoTemplate(todo));
+    }
+  }
+  uncompletedTodoContainer.innerHTML = uncompletedTodos.join("");
+  completedTodoContainer.innerHTML = completedTodos.join("");
   if (state.todos.length === 0) todoContainer.innerHTML = defaultMsg;
 }
 

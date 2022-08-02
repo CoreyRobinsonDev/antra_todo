@@ -74,6 +74,7 @@ body {
 
 .todo__default-msg {
   text-align: center;
+  font-size: 2rem;
   color: grey;
 }
 .--completed {
@@ -111,6 +112,11 @@ path {
   background-color: var(--vermillion-red);
 }
 
+.completed__todos {
+  margin-top: 4rem;
+}
+
+/* responsive design */
 @media only screen and (max-width: 800px) {
   .submit__btn {
     margin: 1rem 0;
